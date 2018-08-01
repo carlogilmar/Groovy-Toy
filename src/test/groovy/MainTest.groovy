@@ -1,6 +1,6 @@
 import spock.lang.Specification
 
-class MainTest extends Specification {
+class TestSpec extends Specification {
 
   Util util = new Util()
 
