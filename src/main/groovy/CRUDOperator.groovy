@@ -1,6 +1,5 @@
 class CRUDOperator{
 
-
   List<Student> storage = []
 
   List<Student> findAllStudents(){
@@ -11,4 +10,9 @@ class CRUDOperator{
     storage.add(student)
   }
 
+  def saveAListOfStudents( List<Student> students ){
+    students.each{ student ->
+      storage << student
+    }
+  }
 }
