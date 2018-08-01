@@ -2,11 +2,13 @@ import spock.lang.Specification
 
 class MainTest extends Specification {
 
-    def "Test division of numbers by 2"() {
+    def "Test something"() {
       given:
+        Util util = new Util()
       when:
-      expect:
-       2 == 3
+        def numbers = util.giveMeAList()
+      then:
+        numbers.size == 0
     }
 
 }

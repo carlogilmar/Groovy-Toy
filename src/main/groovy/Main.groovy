@@ -1,7 +1,7 @@
-class Main {
+class Util {
 
-    static void main(String[] args) {
-        def result = "OK"
-        println "Result: ${result}"
-    }
+  def giveMeAList(){
+    [1,2,3,4,5,5]
+  }
+
 }
