@@ -6,20 +6,35 @@ pipeline {
 	}
 
 	stages {
+		stage('Checkout Repository') {
+			steps {
+				sh 'ls -la'
+			}
+		}
+		stage('Testing') {
+			steps {
+				sh 'gradle clean test'
+			}
+		}
 		stage('Build') {
 			steps {
-				echo 'Building..'
+				sh 'gradle build'
 			}
 		}
-		stage('Test') {
-			steps {
-				echo 'Testing..'
-			}
-		}
-		stage('Deploy') {
-			steps {
-				echo 'Deploying....'
-			}
-		}
+    stage('Deploy to DEVELOP'){
+      steps {
+        echo 'Deploying to Develop...'
+      }
+    }
+    stage('Deploy to QA'){
+      steps {
+        echo 'Deploying to QA...'
+      }
+    }
+    stage('Deploy to PROD'){
+      steps {
+        echo 'Deploying to Prod...'
+      }
+    }
 	}
 }
