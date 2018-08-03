@@ -33,7 +33,7 @@ class TestSpec extends Specification {
     when:
       operator.saveAListOfStudents( [student1, student2, student3] )
     then:
-      operator.findAllStudents().size() == 3
+      operator.findAllStudents().size() == 5
   }
 
 }
